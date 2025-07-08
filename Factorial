@@ -1,0 +1,80 @@
+# how to calculate for a list
+
+# Factorial
+
+# using a function:
+
+def factorial(n):
+    if n < 0:
+        return "Factorial is not defined for negative numbers"
+    elif n == 0 or n == 1:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+num = int(input("Enter a number: "))
+print(f"The factorial of {num} is {factorial(num)}")
+
+# method 2:
+
+def factorial(n):
+    if n < 0:
+        return "Factorial is not defined for negative numbers"
+    elif n == 0 or n == 1:
+        return 1
+    else:
+        result = 1
+        for i in range(2, n + 1):
+            result *= i
+        return result
+
+
+num = int(input("Enter a number: "))
+print(f"The factorial of {num} is {factorial(num)}")
+
+# If n is greater than 1:
+    # It initializes a variable result to 1.
+    # Then it loops from 2 to n (inclusive) and multiplies result by each number.
+    # This builds the factorial step by step.
+
+# result *= I is a shorthand in Python. It means result = result * i
+
+# What it does:
+# It multiplies the current value of result by I.
+# Then it updates result with the new value.
+# In the context of the factorial function:
+# Suppose you're calculating 5! (which is 5 × 4 × 3 × 2 × 1):
+# Here's how the loop works:
+
+#result = 1
+#for i in range(2, 6): # i goes from 2 to 5
+#    result *= i # result = result * i
+
+#Step-by-step:
+#i = 2: result = 1 * 2 = 2
+#i = 3: result = 2 * 3 = 6
+#i = 4: result = 6 * 4 = 24
+#i = 5: result = 24 * 5 = 120
+#So, 5! = 120.
+
+# step-by-step version of the factorial function that prints each multiplication step so you can see how the result builds up:
+
+def factorial_step_by_step(n):
+    if n < 0:
+        return "Factorial is not defined for negative numbers."
+    elif n == 0 or n == 1:
+        print(f"{n}! = 1")
+        return 1
+    else:
+        result = 1
+        print(f"Calculating {n}!")
+        for i in range(2, n + 1):
+            print(f"{result} × {i} = {result * i}")
+            result *= i
+        print(f"{n}! = {result}")
+        return result
+
+# Example usage
+num = int(input("Enter a number: "))
+factorial_step_by_step(num)
+
