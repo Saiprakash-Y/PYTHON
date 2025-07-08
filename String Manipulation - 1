@@ -1,0 +1,22 @@
+# Write a function called greet that takes two arguments: name (a string) and age (an integer).
+# The function should return a string message in the format "Hello, [name]! You are [age] years old."
+
+def greet(name: str, age: int):
+    return f"Hello, {name}! You are {age} years old."
+print(greet("Jim", 20))
+
+message = greet("jim", 20)
+print(message)
+
+# Here's how you can make the greet function interactive using user input:
+
+def greet(name, age):
+    return f"Hello, {name}! You are {age} years old."
+
+# Get user input
+user_name = input("Enter your name: ")
+user_age = int(input("Enter your age: "))
+
+# Call the function and print the result
+message = greet(user_name, user_age)
+print(message)
