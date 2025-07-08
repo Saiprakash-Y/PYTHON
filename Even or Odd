@@ -1,5 +1,84 @@
 # Even or odd
 
+# The function check_even_odd takes one argument: number.
+# It uses the modulo operator % to determine if the number is divisible by 2.
+# It returns "Even" if the number is divisible by 2, otherwise "Odd".
+
 def is_even(number):
     return number % 2 == 0
 print(is_even(5))
+
+# Method 2:
+def check_even_odd(number):
+    if number % 2 == 0:
+        return "Even"
+    else:
+        return "Odd"
+print(check_even_odd(5))
+
+number = int(input("Enter a number: "))
+result = check_even_odd(number)
+print(f"The number {number} is {result}")
+
+# Here's a version of the function that can handle a list of numbers and return whether each one is even or odd:
+def check_even_odd_list(numbers):
+    result = {}
+    for number in numbers:
+        if number % 2 == 0:
+            result[number] = "Even"
+        else:
+            result[number] = "Odd"
+    return result
+
+# Example usage
+num_list = [10, 15, 22, 33, 40]
+results = check_even_odd_list(num_list)
+
+for num, res in results.items():
+    print(f"The number {num} is {res}.")
+
+
+def check_even_odd(number):
+    if number % 2 == 0:
+        return "Even"
+    else:
+        return "Odd"
+
+# Test with negative numbers
+print(check_even_odd(-4))
+print(check_even_odd(-3))
+
+# To filter even or odd numbers from a list in Python, you can use list comprehensions or a simple loop. Here's how to do both:
+
+# Using List Comprehension:
+def filter_even(numbers):
+    return [num for num in numbers if num % 2 == 0]
+
+def filter_odd(numbers):
+    return [num for num in numbers if num % 2 != 0]
+
+# Example usage
+num_list = [-10, -5, 0, 7, 12]
+even_numbers = filter_even(num_list)
+odd_numbers = filter_odd(num_list)
+
+print("Even numbers:", even_numbers)
+print("Odd numbers:", odd_numbers)
+
+# Using a Loop (if you prefer clarity over brevity):
+def filter_even(numbers):
+    even = []
+    for num in numbers:
+        if num % 2 == 0:
+            even.append(num)
+    return even
+
+def filter_odd(numbers):
+    odd = []
+    for num in numbers:
+        if num % 2 != 0:
+            odd.append(num)
+    return odd
+
+
+
