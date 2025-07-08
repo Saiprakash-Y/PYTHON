@@ -1,0 +1,147 @@
+print("hello")
+
+string = "hello"
+
+print(string, type(string))
+
+integer = 4
+
+variable_integer = integer
+
+print(variable_integer, type(variable_integer))
+
+float1 = int(3.99)
+
+print(float, type(float))
+
+boolean = 3>2
+print(boolean, type(boolean))
+
+operation = 3/4
+print(operation, type(operation))
+
+operation1 = 3%4
+print(operation1, type(operation1))
+
+operation2 = int("12") + 4
+print(operation2, type(operation2))
+
+X = 3
+
+if  X > 0:
+    print("X is bigger than 0")
+
+elif X > 1:
+    print("X is bigger than 1")
+
+elif X == 0:
+    print("X is equal to 0")
+
+else:
+    print("X is not bigger than 1")
+
+
+#Lists are collection of items that are changeable and we define lists in square brackets
+
+list2 = [1,2,3,4,5]
+print(list2)
+
+el = list2[0]
+print(el)
+
+el1 = list2[-1]
+print(el1)
+
+el3 = list2[1:3]
+print(el3)
+
+#reverse the list
+
+el4 = list2[::-1]
+print(el4)
+
+el5 = list2[::-2]
+print(el5)
+
+#append
+
+list2.append(6)
+print(list2)
+
+#if we want to put an element in a precise location then use insert
+
+list2.insert(0,0)
+print(list2)
+
+#combining two lists
+
+another_list = [7,8]
+
+list2.extend(another_list)
+print(list2)
+
+index_of_3 = list2.index(3)
+print(index_of_3)
+
+count_of_3 = list2.count(3)
+print(count_of_3)
+
+list2.remove(0)
+print(list2)
+
+#remove element from list based on index
+
+list2.pop(7)
+print(list2)
+
+#if you don't put any index in pop() then it automatically removes last element
+
+list2.pop()
+print(list2)
+
+list2.reverse()
+print(list)
+
+element_popped = list2.pop()
+print(element_popped)
+print(list)
+
+list2.reverse()
+print(list)
+
+list1 = ['a','b','c']
+print(len(list1))
+
+print(sum(list))
+
+#clears everything from list
+list2.clear()
+print(list)
+
+#sorting the list
+
+list3 = [1,3,2,4,5]
+print(sorted(list))
+
+list4 = ['ab', 'ca', 'xm', 'xc', 'xv']
+print(sorted(list))
+
+print(sorted(list)[::-1])
+
+print(sorted(list, reverse=True))
+
+#Functions: Functions in Python are named blocks of reusable code designed to perform a specific task.
+
+def squared(x: int):
+    y = x ** 2
+    return y
+print(squared(3))
+
+def pow1(x,times):
+    return x**times
+print(pow(2,3))
+
+assert pow(2,3) == pow(2,3);
+assert pow(2,4) == pow(2,4);
+
+print("success")
