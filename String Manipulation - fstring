@@ -2,6 +2,10 @@
 # The function should return a string message in the format "Hello, [name]! You are [age] years old."
 
 def greet(name: str, age: int):
+# An f-string (short for formatted string literal) is a way to embed expressions inside string literals,
+# using curly braces {}. It was introduced in Python 3.6 and makes string formatting simpler and more readable.
+# The f before the string tells Python to evaluate expressions inside {}.
+# You can put variables, math, or even function calls inside the curly braces.
     return f"Hello, {name}! You are {age} years old."
 print(greet("Jim", 20))
 
@@ -20,3 +24,21 @@ user_age = int(input("Enter your age: "))
 # Call the function and print the result
 message = greet(user_name, user_age)
 print(message)
+
+# Math inside f-strings:
+
+x = 5
+y = 3
+print(f"The sum of {x} and {y} is {x + y}")
+
+# Function calls:
+
+def greet(name):
+    return f"Hi, {name}!"
+
+print(f"{greet('Priya')} Welcome to the course.")
+
+# Formatting numbers:
+
+pi = 3.14159
+print(f"Pi rounded to 2 decimal places: {pi:.2f}")
