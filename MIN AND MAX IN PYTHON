@@ -1,0 +1,43 @@
+input1 = [5,9,2,12,7]
+print(input1)
+
+# Find the maximum
+
+def find_max(numbers):
+    return max(numbers) if numbers else None
+print(find_max(input1))
+
+# Method 2:
+
+def find_max1(numbers1):
+    if not numbers1:
+        return None
+    max_num = numbers1[0]
+    for num in numbers1:
+        if num > max_num:
+            max_num = num
+    return max_num
+print(find_max1(input1))
+
+# In the above code find_max takes a list of numbers as input
+# It initializes max_num with the first element
+# Then it iterates through the list, updating max_num whenever it finds a larger number
+# Finally, it returns the maximum value found
+
+# Find the minimum
+
+def find_min(numbers):
+    return min(numbers) if numbers else None
+print(find_min(input1))
+
+# Method 2:
+
+def find_min1(numbers1):
+    if not numbers1:
+        return None
+    min_num = numbers1[0]
+    for num1 in numbers1:
+        if num1 < min_num:
+            min_num = num1
+    return min_num
+print(find_min1(input1))
